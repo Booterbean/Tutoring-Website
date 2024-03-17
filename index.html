@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corey Predella - Tutoring Services</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+</head>
+<body>
+    <div id="p5-canvas"></div> <!-- Placeholder for the p5.js canvas -->
+    <div class="card">
+        <h1>Hello!</h1>
+        <p>My name is <a href="https://coreypredella.com/">Corey Predella</a>, and I am a student of <a href="http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/#honorsdegreeprogramtext">Honors Math</a> at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>. As a teaching assistant and substitute for the <a href="https://www.awesomemath.org/what-is-awesomemath/">AwesomeMath Summer Program</a>, I have had the opportunity to impart mathematical knowledge to students and help them achieve excellence in top-tier math competitions, including the <a href="https://en.wikipedia.org/wiki/United_States_of_America_Mathematical_Olympiad">United States Mathematical Olympiad</a>. I have successfully guided students to obtain perfect scores on their SAT and ACT math sections, as well as achieving A’s in their math coursework in school.</p>
+        <p>I believe that the key to mathematical excellence is predicated on a few small adjustments in the approach, which is often missing in many U.S. school systems. I delve into this topic in my <a href="https://www.youtube.com/watch?v=MrlZ89Uc4A0">TEDx talk</a>  on math education. As a firm believer in the beauty of mathematics, my goal is to inspire my students to appreciate its elegance while also building strong mathematical fundamentals, instilling independence, and encouraging creative problem-solving skills beyond math. I offer my services to students between the ages of 12-18 and meet them at their current skill level. As a charismatic and patient instructor, I foster inquisitiveness and curiosity in my students.</p>
+        <p>My hourly rate is $50. With each session, I prepare a <a href="Logs.pdf">math handout</a>
+  curated specifically to the student’s needs, which has specially selected homework problems for self-practice. As an avid computer programmer, I’ve also built <a href="https://colympi.com/">my own platform</a> to monitor student progress, assign problems, and maintain communication if they become stuck on challenge problems. If you are interested in availing my services, please fill out the form below and I’ll email back within a day.</p>
+        <button id="contactButton">Contact Me</button>
+    </div>
+
+    <div class="testimonial-section">
+        <div class="card testimonial">
+            "Corey was a model instructor at our center, always showing patience and empathy, and nurturing independent, critical thinking among the students. He was particularly adept at assessing each student’s needs and interests and adjusting his method of instruction to appeal to the individual. The students looked up to Corey as a positive role model, which elevated the learning experience for the kids in so many ways."
+            <p>- Grace S, Owner of <a href="https://www.codeninjas.com/ma-medfield">Code Ninjas Medfield</a></p>
+        </div>
+        <div class="card testimonial">
+            "Corey was a charismatic presence who communicated effectively, empathized with the students, and created an excellent learning environment during the problem sessions and beyond. Corey was a receptive and supportive assistant, a pleasant presence for the students, and a wonderful mathematical communicator. His advanced mathematical knowledge and recommended skills helped him teach at this level, as well as his availability to adapt, learn, and perform; moreover, he knows how to socialize and increase the students' engagement during the problem sessions, office hours, and social activities."
+            <p>- Dr. Prajea, <a href="https://www.awesomemath.org/summer-program/overview/our-faculty/">AMSP</a>  Instructor</p>
+        </div>
+        <div class="card testimonial">
+            “Corey has been an extraordinary educator, demonstrating unparalleled patience and adaptability in teaching my brother math. Corey’s ability to connect and tailor lessons to his individual learning needs has enhanced his understanding and kindled an interest in engineering and coding.”
+            <p>Gunner, brother of Student</p>
+        </div>
+        <div class="card testimonial">
+            "Thank you for the great mentoring you gave! Your amazing attitude and kind words with your patience made you one of the best (if not the best) instructors I've ever met."
+            <p>Bennet, Student</p>
+        </div>
+        <div class="card testimonial">
+            "Corey regularly provides original ideas and out-of-the-box approaches that help simplify and solve a problem. He always tries to look at problems from different angles and find multiple ways that could potentially lead to a solution. Corey’s love for mathematics allows him to turn fear of a difficult problem into curiosity and a desire to find a solution."
+            <p>- Alan A, <a href="https://www.imo-official.org/">IMO</a> Medalist</p>
+        </div>
+    </div>
+
+    <!-- Overlay window for the contact form -->
+    <div id="overlay" style="display:none;">
+        <div class="overlay-content">
+            <span class="close-button" onclick="closeOverlay()">&times;</span>
+            <h2>Contact Form</h2>
+            <form id="contactForm" action="https://formspree.io/f/xzbnadew" method="POST">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name"><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br><br>
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone"><br><br>
+                <label for="grade">Grade of Student:</label><br>
+                <input type="text" id="grade" name="grade"><br><br>
+                <label for="subject">Subject of Study:</label><br>
+                <select id="subject" name="subject">
+                    <option value="SAT/ACT Math">SAT/ACT Math</option>
+                    <option value="Algebra">Algebra</option>
+                    <option value="Geometry">Geometry</option>
+                    <option value="Precalculus">Precalculus</option>
+                    <option value="Calculus">Calculus</option>
+                    <option value="Advanced Topics">Advanced Topics</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="AMC 8/10/12">AMC 8/10/12</option>
+                    <option value="AIME">AIME</option>
+                </select><br><br>
+                <label for="days">Preferred days of tutoring:</label><br>
+                <input type="date" id="days" name="days"><br><br>
+                <label for="background">Mathematical Background of Student:</label><br>
+                <textarea id="background" name="background"></textarea><br><br>
+                <label for="notes">Additional Notes:</label><br>
+                <textarea id="notes" name="notes"></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+            <p id="confirmationMessage" style="display: none;">Thank you for your interest! I will send an email back within the next day.</p>
+        </div>
+    </div>
+
+    <script src="sketch.js"></script>
+    <script>
+        document.getElementById('contactButton').onclick = function() {
+            document.getElementById('overlay').style.display = 'flex';
+        };
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission for demonstration
+            var confirmationMessage = document.getElementById('confirmationMessage');
+            confirmationMessage.style.display = 'block';
+
+            setTimeout(() => {
+                document.getElementById('overlay').style.display = 'none';
+                document.getElementById('contactForm').reset();
+                confirmationMessage.style.display = 'none';
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
